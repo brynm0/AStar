@@ -22,10 +22,56 @@ namespace AStar
         {
         }
 
-        public Polyline AStarSearch (List<Node> nodes, int startIndex, int targetIndex)
+        public List<int> AStarSearch (List<Node> nodes, int startIndex, int targetIndex)
         {
-            Polyline a = new Polyline();
-            return a;
+            List<Node> closedSet = new List<Node>();
+            List<Node> openSet = new List<Node>();
+            openSet.Add(nodes[startIndex]);
+
+            nodes[startIndex].gScore = 0;
+            nodes[startIndex].fScore = costEstimate(nodes[startIndex], nodes[targetIndex]);
+
+            while (openSet.Count > 0)
+            {
+                int currentIndex = getLowestFScore(nodes);
+
+                if (currentIndex == targetIndex)
+                {
+                    return reconstructPath(current);
+                }
+            }
+
+
+
+        }
+
+        public List<int> reconstructPath(int current)
+        {
+
+        }
+
+        public int getLowestFScore(List<Node> nodes)
+        {
+            int recordIndex;
+            float record = float.PositiveInfinity;
+
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                if (nodes[i].fScore < record)
+                {
+                    record = nodes[i].fScore;
+                    recordIndex = i;
+                }
+            }
+            return recordIndex;
+        }
+        public float costEstimate (Node start, Node goal)
+        {
+            float xDif = (start.position.X - goal.position.Y);
+            float yDif = (start.position.Y - goal.position.Y);
+            float zDif = (start.position.Z - goal.position.Z);
+            float distance = (float)Math.Sqrt(xDif * xDif + yDif * yDif + zDif * zDif);
+            return distance;
         }
 
         /// <summary>
