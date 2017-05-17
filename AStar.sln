@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStar", "AStar\AStar.csproj", "{D43EF29E-9EF9-4770-8C54-5F70D7EE9C8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug32|Any CPU = Debug32|Any CPU
+		Debug64|Any CPU = Debug64|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D43EF29E-9EF9-4770-8C54-5F70D7EE9C8F}.Debug32|Any CPU.ActiveCfg = Debug32|Any CPU
+		{D43EF29E-9EF9-4770-8C54-5F70D7EE9C8F}.Debug32|Any CPU.Build.0 = Debug32|Any CPU
+		{D43EF29E-9EF9-4770-8C54-5F70D7EE9C8F}.Debug64|Any CPU.ActiveCfg = Debug64|Any CPU
+		{D43EF29E-9EF9-4770-8C54-5F70D7EE9C8F}.Debug64|Any CPU.Build.0 = Debug64|Any CPU
+		{D43EF29E-9EF9-4770-8C54-5F70D7EE9C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D43EF29E-9EF9-4770-8C54-5F70D7EE9C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
